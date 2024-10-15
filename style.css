@@ -1,0 +1,143 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ecef; /* Slightly darker background for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #495057; /* Darker text color for readability */
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Softer shadow */
+    max-width: 450px;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 25px;
+    font-size: 2.5rem; /* Larger heading */
+    color: #343a40; /* Darker color for contrast */
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px; /* Increased gap between cells */
+    margin-bottom: 25px; /* More space below the board */
+}
+
+.cell {
+    background-color: #f8f9fa; /* Lighter background for cells */
+    border: 2px solid #ced4da; /* Softer border color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem; /* Larger font size for X and O */
+    color: #495057; /* Consistent text color */
+    height: 120px; /* Increased height for better touch targets */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s; /* Added transform for effects */
+}
+
+.cell:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.cell.x {
+    background-color: #ffcccc; /* Light red background for X */
+}
+
+.cell.o {
+    background-color: #cceeff; /* Light blue background for O */
+}
+
+/* Game status text */
+#status {
+    font-size: 1.5rem; /* Slightly larger status text */
+    margin-bottom: 25px;
+    color: #6c757d; /* Muted text color for status */
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px; /* More rounded corners */
+    text-align: center;
+    max-width: 350px;
+    width: 100%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modal h2 {
+    margin-bottom: 25px;
+    font-size: 1.75rem; /* Larger modal heading */
+    color: #343a40; /* Darker color for contrast */
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #495057; /* Darker close button color */
+    cursor: pointer;
+}
+
+.modal-btn {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem; /* Slightly larger button text */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Added transform for effects */
+}
+
+.modal-btn:hover {
+    background-color: #0056b3; /* Darker on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+    .cell {
+        height: 100px; /* Adjust cell height for mobile */
+        font-size: 2rem; /* Adjust font size for mobile */
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust heading size for mobile */
+    }
+
+    #restartBtn, .modal-btn {
+        font-size: 0.9rem;
+        padding: 10px 20px; /* Adjust padding for mobile */
+    }
+}
