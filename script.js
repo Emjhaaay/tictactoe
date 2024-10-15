@@ -73,7 +73,7 @@ function showWinModal(winner) {
         winnerImage.src = './draw.jpg'; // Replace with your draw image
     } else {
         winnerMessage.textContent = `${winner} wins the game!`;
-        winnerImage.src = winner === 'X' ? './malupiton.gif' : 'path/to/o-wins-image.png'; // Replace with your X or O win image
+        winnerImage.src = winner === 'X' ? './malupiton.gif' : './malupiton.gif'; // Replace with your X or O win image
     }
     modal.style.display = 'flex';
 }
