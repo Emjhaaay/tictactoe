@@ -70,7 +70,7 @@ function handleCellClick(e) {
 function showWinModal(winner) {
     if (winner === 'Nobody') {
         winnerMessage.textContent = `It's a draw!`;
-        winnerImage.src = './draw.jpg'; // Replace with your draw image
+        winnerImage.src = './totoy-abnoy-evil-laugh.gif'; // Replace with your draw image
     } else {
         winnerMessage.textContent = `${winner} wins the game!`;
         winnerImage.src = winner === 'X' ? './bossing-malupiton.gif' : './bossing-malupiton.gif'; // Replace with your X or O win image
